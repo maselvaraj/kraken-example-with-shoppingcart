@@ -1,0 +1,27 @@
+[program:kraken-cart]
+command=npm start
+process_name=%(program_name)s
+numprocs=1
+numprocs_start=0
+priority=150
+autostart=true
+autorestart=true
+startsecs=1
+startretries=3
+exitcodes=0,2
+stopsignal=TERM
+stopwaitsecs=10
+user=kraken
+redirect_stderr=false
+stdout_logfile=/var/log/supervisor/kraken-stdout.log
+stdout_logfile_maxbytes=50MB
+stdout_logfile_backups=10
+stdout_capture_maxbytes=0
+stdout_events_enabled=false
+stderr_logfile=/var/log/supervisor/kraken-stderr.log
+stderr_logfile_maxbytes=50MB
+stderr_logfile_backups=10
+stderr_capture_maxbytes=0
+stderr_events_enabled=false
+directory=/home/kraken/kraken-example-with-shoppingcart
+serverurl=AUTO 
