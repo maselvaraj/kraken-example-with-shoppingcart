@@ -1,0 +1,18 @@
+{
+    "family": "kraken-shopping-cart-family",
+    "containerDefinitions": [
+        {
+            "image": "maselvaraj/kraken-shopping-cart:v_%BUILD_NUMBER%",
+            "name": "kraken-shopping-cart",
+            "cpu": 1,
+            "memory": 756,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 8000,
+                    "hostPort": 80
+                }
+            ]
+        }
+    ]
+}
